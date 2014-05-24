@@ -1,11 +1,9 @@
-## The following two functions generally help to create a matrix vector,
-## with access to modify it,then to get the Solve(inverted format) of
-## the matrix stored inside the vector(if there is),otherwise to calculate
-## that Solve and store it inside the vector.
+## The following two functions help to create a matrix vector,with access to modify it,
+## then to get the Solve(inverted format) of the matrix stored inside the vector(if there is),
+## otherwise to calculate that Solve and store it inside the vector.
 
-## This makeCacheMatrix has two variables and four functions 
-## x is a matrix intaken from outside,and s should be seen as
-## a place to store the Solve
+## This makeCacheMatrix has two variables and four functions. x is a matrix intaken from outside,
+## and s should be seen as a place to store the Solve
 
 makeCacheMatrix <- function(x = matrix()) {  ##intake a matrix x
   s<-NULL                         ##initial s as NULL
@@ -33,11 +31,9 @@ makeCacheMatrix <- function(x = matrix()) {  ##intake a matrix x
   ## store the four functions as elements of a list which will be returned if we call the makeCacheMatrix function
 }
 
-## This cacheSolve intakes a matrix x,and firstly checks if
-## there was already a Solve stored.If so,it will directly
-## return that Solve with a message for notification,otherwise 
-## it will do a new calculation of this matrix before return
-## the Solve,and put it into storage at the same time.
+## This cacheSolve intakes a matrix x,and firstly checks if there was already a Solve stored.
+##If so,it will directly return that Solve with a message for notification,otherwise it will do a 
+##new calculation of this matrix before return the Solve,and put it into storage at the same time.
 
 cacheSolve <- function(x, ...) {
   s <- x$getSolve()                     ##  intake the "s" from an existing matrix
